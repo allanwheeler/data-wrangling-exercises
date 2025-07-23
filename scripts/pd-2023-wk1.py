@@ -1,7 +1,9 @@
 import pandas as pd
+import os
+print(os.getcwd())
 
 # Input the data
-df = pd.read_csv('../input/pd-2023-wk1-input.csv')
+df = pd.read_csv('./input/pd-2023-wk1-input.csv')
 
 # Split the Transaction Code to extract the letters at the start of the transaction code.
 df[['Bank', 'Code']]  = df['Transaction Code'].str.split('-', n=1, expand=True)
